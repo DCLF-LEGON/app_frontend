@@ -26,7 +26,9 @@ export default function Verify({ navigation }) {
 
 
                     <TouchableOpacity style={styles.verifyButton}>
-                        <Text style={styles.verifyText}>VERIFY</Text>
+                        <Text style={styles.verifyText}
+                        onPress={() => navigation.navigate('Verified')}
+                        >VERIFY</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.resendButton}>
                         <Text style={styles.resendText}>RESEND CODE</Text>

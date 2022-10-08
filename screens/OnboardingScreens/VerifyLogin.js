@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons, Ionicons, AntDesign, FontAwesome } from "@expo/vector-icons";
 
-export default function Verify({ navigation }) {
+export default function VerifyLogin({ navigation }) {
     return (
 
 

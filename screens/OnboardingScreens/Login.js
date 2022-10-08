@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { Link, NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import {MaterialCommunityIcons,MaterialIcons, Ionicons, AntDesign, FontAwesome} from "@expo/vector-icons";
 
@@ -8,7 +8,7 @@ export default function Login({navigation}) {
        
         
             <View style={styles.container}>
-                <KeyboardAvoidingView></KeyboardAvoidingView>
+
                 <View style={styles.header}>
                     <TouchableOpacity
                       onPress={() => navigation.navigate('Main')}
@@ -18,9 +18,9 @@ export default function Login({navigation}) {
                    
                     <Text style={styles.text_header}>LOGIN</Text>
                 </View>
-                <View style={styles.footer}>
-                    <ScrollView>
-                        <Text style={styles.text_footer}>Email Address</Text>
+                 <View style={styles.footer}>
+                  <ScrollView> 
+                          <Text style={styles.text_footer}>Email Address</Text>
                         <TextInput
                             placeholder="Type your e-mail"
                             placeholderTextColor="#666666"
@@ -29,9 +29,7 @@ export default function Login({navigation}) {
 
                         />
 
-                       
-
-                        <Text style={styles.text_footer}>Enter your Password</Text>
+                      <Text style={styles.text_footer}>Enter your Password</Text>
                         <TextInput
                             placeholder="Password"
                             placeholderTextColor="#666666"
@@ -40,22 +38,32 @@ export default function Login({navigation}) {
 
                         />
 
+
+                    <View style={styles.remember_forgot} >
+                   <View><Text>Remember me</Text></View>
+                    <TouchableOpacity>
+                        <Text style={{color:"#0174DF"}}>Forgot Password?</Text>
+                    </TouchableOpacity>
+                   </View>
                        
 
 
                         <TouchableOpacity style={styles.submitButton}
-                        onPress={() => navigation.navigate('Verify')}
+                        
                         >
                             <Text style={styles.submitText}>LOGIN</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> 
+
+                        <View><Text style={{alignSelf:"center"}}>Dont have an account?<Text  onPress={() => navigation.navigate('Signup')} style={{fontWeight:"bold", color:"#0174DF"}}>
+                            Click here</Text></Text></View>
 
 
 
 
-                    </ScrollView>
+                    </ScrollView> 
                 </View>
 
-
+ 
 
             </View>
       
@@ -112,6 +120,13 @@ const styles = StyleSheet.create({
         marginBottom: 20,
 
     },
+     
+    remember_forgot:{
+       flexDirection:"row",
+       justifyContent:"space-between",
+       marginTop:20
+    },
+
     submitButton: {
         paddingVertical: 10,
         backgroundColor: "#fff",
@@ -120,7 +135,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         borderColor: "#0174DF",
-        top: 20
+        marginTop: 40,
+        marginBottom:50
 
     },
     submitText: {
