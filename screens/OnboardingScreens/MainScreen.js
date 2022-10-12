@@ -8,8 +8,8 @@ export default function Main({ navigation }) {
       <View style={styles.container}>
 
          <View style={styles.imageContainer}>
-            <Image source={require('../../assets/legon.jpg')} style={{ height: 100, width: 100, }} resizeMode="center" />
-            <Image source={require('../../assets/dlcf.jpeg')} style={{ height: 100, width: 100, }} resizeMode="center" />
+            <Image source={require('../../assets/dlcf.jpeg')} style={{ height: 73, width: 73, }} resizeMode="center" />
+            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 54, }} resizeMode="center" />
          </View>
 
          <Text style={styles.heroText}>DLCF-LEGON</Text>

@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#0174DF',
+        
     },
     header: {
         flex: 1,
@@ -105,8 +106,8 @@ const styles = StyleSheet.create({
     footer: {
         flex: 3,
         backgroundColor: '#fff',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         paddingHorizontal: 20,
         paddingVertical: 30,
         justifyContent:"center",

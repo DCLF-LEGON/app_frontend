@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
         flex: 3,
         backgroundColor: '#fff',
         borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        paddingHorizontal: 20,
+        borderTopRightRadius: 10,
+        paddingHorizontal: 10,
         paddingVertical: 30,
         justifyContent:"center",
        
