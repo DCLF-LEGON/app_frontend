@@ -1,80 +1,146 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import {MaterialCommunityIcons,MaterialIcons, Ionicons, AntDesign, FontAwesome} from "@expo/vector-icons";
+import { MaterialCommunityIcons, MaterialIcons, Ionicons, AntDesign, FontAwesome, Feather  } from "@expo/vector-icons";
 
-export default function Signup({navigation}) {
+class SignUp extends React.Component {
+              
+  constructor (props) {
+    super(props)
+    this.state ={  
+      secureTextEntry: true,
+      confirm_secureTextEntry: true,
+      isValidUser: true,
+      isValidPassword: true,
+ 
+    }
+ }
+
+
+ updateSecureTextEntry = () => {
+    this.setState({
+      secureTextEntry: !this.state.secureTextEntry
+  });
+    
+  }
+  
+   updateConfirmSecureTextEntry = () => {
+    this.setState({
+      confirm_secureTextEntry: !this.state.confirm_secureTextEntry
+  });
+  }
+
+
+    render(){
+        let {navigation} = this.props 
     return (
-       
-        
-            <View style={styles.container}>
-                <KeyboardAvoidingView></KeyboardAvoidingView>
-                <View style={styles.header}>
-                    <TouchableOpacity
-                      onPress={() => navigation.navigate('Main')}
-                    >
+
+
+        <View style={styles.container}>
+            <KeyboardAvoidingView></KeyboardAvoidingView>
+            <View style={styles.header}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Main')}
+                >
                     <AntDesign style={styles.header_icon} name="left" size={20} color="#fff" />
-                    </TouchableOpacity>
-                   
-                    <Text style={styles.text_header}>SIGN UP</Text>
-                </View>
-                <View style={styles.footer}>
-                    <ScrollView>
-                        <Text style={styles.text_footer}>Full Name</Text>
-                        <TextInput
-                            placeholder="Name"
-                            placeholderTextColor="#666666"
-                            style={styles.textInput}
-                            autoCapitalize="none"
+                </TouchableOpacity>
 
-                        />
-
-                        <Text style={styles.text_footer}>Email Address</Text>
-                        <TextInput
-                            placeholder="Type your e-mail"
-                            placeholderTextColor="#666666"
-                            style={styles.textInput}
-                            autoCapitalize="none"
-
-                        />
-
-                        <Text style={styles.text_footer}>Create Password</Text>
-                        <TextInput
-                            placeholder="Create Password"
-                            placeholderTextColor="#666666"
-                            style={styles.textInput}
-                            autoCapitalize="none"
-
-                        />
-
-                        <Text style={styles.text_footer}>Confirm Password</Text>
-                        <TextInput
-                            placeholder="Confirm Password"
-                           
-                            placeholderTextColor="#666666"
-                            style={styles.textInput}
-                            autoCapitalize="none"
-
-                        />
-
-
-                        <TouchableOpacity style={styles.submitButton}
-                        onPress={() => navigation.navigate('Verify')}
-                        >
-                            <Text style={styles.submitText}>SUBMIT</Text>
-                        </TouchableOpacity>
-
-
-
-
-                    </ScrollView>
-                </View>
-
-
-
+                <Text style={styles.text_header}>SIGN UP</Text>
             </View>
-      
+            <View style={styles.footer}>
+                <ScrollView>
+                    <Text style={styles.text_footer}>Full Name</Text>
+                    <TextInput
+                        placeholder="Name"
+                        placeholderTextColor="#666666"
+                        style={styles.textInput}
+                        autoCapitalize="none"
+                        multiline={false}
+
+                    />
+
+                    <Text style={styles.text_footer}>Email Address</Text>
+                    <TextInput
+                        placeholder="Type your e-mail"
+                        placeholderTextColor="#666666"
+                        style={styles.textInput}
+                        autoCapitalize="none"
+                        multiline={false}
+
+                    />
+
+                    <Text style={styles.text_footer}>Create Password</Text>
+                    <View   style={styles.action}>
+                    <TextInput
+                        placeholder="Create Password"
+                        placeholderTextColor="#666666"
+                        style={styles.textInput}
+                        autoCapitalize="none"
+                        multiline={false}
+
+                    />
+                       <TouchableOpacity  
+                           onPress={this.updateSecureTextEntry}
+                           style={styles.eye}
+                           >          
+                 {this.state.secureTextEntry ? 
+                    <Feather name="eye-off" size={20} color="#B1B1B1"  />
+                    :
+                    <Feather 
+                        name="eye"
+                        color="grey"
+                        size={20}
+                    />
+                    }       
+                </TouchableOpacity>
+                    </View>
+
+
+                    <Text style={styles.text_footer}>Confirm Password</Text>
+                    <View   style={styles.action}>
+                    <TextInput
+                        placeholder="Confirm Password"
+
+                        placeholderTextColor="#666666"
+                        style={styles.textInput}
+                        autoCapitalize="none"
+                        multiline={false}
+
+                    />
+                       <TouchableOpacity  
+                           onPress={this. updateConfirmSecureTextEntry}
+                           style={styles.eye}
+                           >          
+                 {this.state.confirm_secureTextEntry ? 
+                    <Feather name="eye-off" size={20} color="#B1B1B1"  />
+                    :
+                    <Feather 
+                        name="eye"
+                        color="grey"
+                        size={20}
+                    />
+                    }       
+                </TouchableOpacity>
+                     </View>
+
+                    <TouchableOpacity style={styles.submitButton}
+                        onPress={() => navigation.navigate('Verify')}
+                    >
+                        <Text style={styles.submitText}>SUBMIT</Text>
+                    </TouchableOpacity>
+
+
+
+
+                </ScrollView>
+            </View>
+
+
+
+        </View>
+
     );
+}
 }
 
 const styles = StyleSheet.create({
@@ -87,30 +153,32 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBottom: 50,
         backgroundColor: '#0174DF',
-         
+
     },
 
     text_header: {
         color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 30,
-         marginTop:40,
-         fontFamily: 'Avenir-Medium',
-         alignSelf:"center"
-         
+        fontSize: 40,
+        marginTop: 40,
+        fontFamily: 'Avenir-Medium',
+        alignSelf: "center",
+        fontWeight:"700",
+        fontStyle:"normal",
+       
+
     },
-    header_icon:{
-        marginTop:70
+    header_icon: {
+        marginTop: 70
     },
     footer: {
         flex: 3,
         backgroundColor: '#fff',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         paddingHorizontal: 20,
         paddingVertical: 30,
-        justifyContent:"center",
-       
+        justifyContent: "center",
+
     },
     text_footer: {
         color: '#05375a',
@@ -126,6 +194,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginBottom: 20,
 
+    },
+    eye :{
+        position:"absolute",
+        left:290,
+        top:12
+        
     },
     submitButton: {
         paddingVertical: 10,
@@ -144,3 +218,5 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
 });
+
+export default SignUp

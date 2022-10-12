@@ -1,74 +1,122 @@
 import * as React from 'react';
 import { Link, NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import {MaterialCommunityIcons,MaterialIcons, Ionicons, AntDesign, FontAwesome} from "@expo/vector-icons";
+import { MaterialCommunityIcons, MaterialIcons, Ionicons, AntDesign, FontAwesome,  Feather } from "@expo/vector-icons";
 
-export default function Login({navigation}) {
-    return (
-       
+class Login extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state ={  
+          secureTextEntry: true,
+          confirm_secureTextEntry: true,
+          isValidUser: true,
+          isValidPassword: true,
+     
+        }
+     }
+    
+    
+     updateSecureTextEntry = () => {
+        this.setState({
+          secureTextEntry: !this.state.secureTextEntry
+      });
         
-            <View style={styles.container}>
+      }
+      
+       updateConfirmSecureTextEntry = () => {
+        this.setState({
+          confirm_secureTextEntry: !this.state.confirm_secureTextEntry
+      });
+      }
+    
+    render(){
+        let {navigation} = this.props 
+    
+    return (
 
-                <View style={styles.header}>
-                    <TouchableOpacity
-                      onPress={() => navigation.navigate('Main')}
-                    >
+
+        <View style={styles.container}>
+
+            <View style={styles.header}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Main')}
+                >
                     <AntDesign style={styles.header_icon} name="left" size={20} color="#fff" />
-                    </TouchableOpacity>
-                   
-                    <Text style={styles.text_header}>LOGIN</Text>
-                </View>
-                 <View style={styles.footer}>
-                  <ScrollView> 
-                          <Text style={styles.text_footer}>Email Address</Text>
-                        <TextInput
-                            placeholder="Type your e-mail"
-                            placeholderTextColor="#666666"
-                            style={styles.textInput}
-                            autoCapitalize="none"
+                </TouchableOpacity>
 
-                        />
+                <Text style={styles.text_header}>LOGIN</Text>
+            </View>
+            <View style={styles.footer}>
+                <ScrollView>
+                    <Text style={styles.text_footer}>Email Address</Text>
+                    <TextInput
+                        placeholder="Type your e-mail"
+                        placeholderTextColor="#666666"
+                        style={styles.textInput}
+                        autoCapitalize="none"
+                        multiline={false}
 
-                      <Text style={styles.text_footer}>Enter your Password</Text>
+                    />
+
+                    <Text style={styles.text_footer}>Enter your Password</Text>
+                    <View style={styles.action}>
                         <TextInput
                             placeholder="Password"
                             placeholderTextColor="#666666"
                             style={styles.textInput}
                             autoCapitalize="none"
+                            multiline={false}
 
                         />
+                        <TouchableOpacity
+                            onPress={this.updateSecureTextEntry}
+                            style={styles.eye}
+                        >
+                            {this.state.secureTextEntry ?
+                                <Feather name="eye-off" size={20} color="#B1B1B1" />
+                                :
+                                <Feather
+                                    name="eye"
+                                    color="grey"
+                                    size={20}
+                                />
+                            }
+                        </TouchableOpacity>
+
+                    </View>
 
 
                     <View style={styles.remember_forgot} >
-                   <View><Text>Remember me</Text></View>
-                    <TouchableOpacity>
-                        <Text style={{color:"#0174DF"}}>Forgot Password?</Text>
+                        <View><Text>Remember me</Text></View>
+                        <TouchableOpacity>
+                            <Text style={{ color: "#0174DF" }}>Forgot Password?</Text>
+                        </TouchableOpacity>
+                    </View>
+
+
+
+                    <TouchableOpacity style={styles.submitButton}
+
+                    >
+                        <Text style={styles.submitText}>LOGIN</Text>
                     </TouchableOpacity>
-                   </View>
-                       
 
-
-                        <TouchableOpacity style={styles.submitButton}
-                        
-                        >
-                            <Text style={styles.submitText}>LOGIN</Text>
-                        </TouchableOpacity> 
-
-                        <View><Text style={{alignSelf:"center"}}>Dont have an account?<Text  onPress={() => navigation.navigate('Signup')} style={{fontWeight:"bold", color:"#0174DF"}}>
-                            Click here</Text></Text></View>
+                    <View><Text style={{ alignSelf: "center" }}>Dont have an account?<Text onPress={() => navigation.navigate('Signup')} style={{ fontWeight: "bold", color: "#0174DF" }}>
+                        Click here</Text></Text></View>
 
 
 
 
-                    </ScrollView> 
-                </View>
-
- 
-
+                </ScrollView>
             </View>
-      
+
+
+
+        </View>
+
     );
-}
+};
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -80,30 +128,31 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBottom: 50,
         backgroundColor: '#0174DF',
-         
+
     },
 
     text_header: {
         color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 30,
-         marginTop:40,
-         fontFamily: 'Avenir-Medium',
-         alignSelf:"center"
-         
+        fontSize: 40,
+        marginTop: 40,
+        fontFamily: 'Avenir-Medium',
+        alignSelf: "center",
+        fontWeight: "700",
+        fontStyle: "normal",
+
     },
-    header_icon:{
-        marginTop:70
+    header_icon: {
+        marginTop: 70
     },
     footer: {
         flex: 3,
         backgroundColor: '#fff',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         paddingHorizontal: 20,
         paddingVertical: 30,
-        justifyContent:"center",
-       
+        justifyContent: "center",
+
     },
     text_footer: {
         color: '#05375a',
@@ -120,11 +169,16 @@ const styles = StyleSheet.create({
         marginBottom: 20,
 
     },
-     
-    remember_forgot:{
-       flexDirection:"row",
-       justifyContent:"space-between",
-       marginTop:20
+    eye :{
+        position:"absolute",
+        left:290,
+        top:12
+        
+    },
+    remember_forgot: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 20
     },
 
     submitButton: {
@@ -136,7 +190,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#0174DF",
         marginTop: 40,
-        marginBottom:50
+        marginBottom: 50
 
     },
     submitText: {
@@ -145,3 +199,5 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
 });
+
+export default Login

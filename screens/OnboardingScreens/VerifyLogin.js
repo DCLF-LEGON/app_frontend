@@ -56,11 +56,12 @@ const styles = StyleSheet.create({
 
     text_header: {
         color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 40,
         marginTop: 40,
         fontFamily: 'Avenir-Medium',
-        alignSelf: "center"
+        alignSelf: "center",
+        fontWeight:"700",
+        fontStyle:"normal",
 
     },
     header_icon: {

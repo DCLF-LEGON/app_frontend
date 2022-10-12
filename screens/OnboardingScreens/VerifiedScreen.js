@@ -44,11 +44,12 @@ const styles = StyleSheet.create({
 
     text_header: {
         color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 30,
-         marginTop:130,
-         fontFamily: 'Avenir-Medium',
-         alignSelf:"center"
+        fontSize: 40,
+        marginTop: 40,
+        fontFamily: 'Avenir-Medium',
+        alignSelf: "center",
+        fontWeight:"700",
+        fontStyle:"normal",
          
     },
     header_icon:{
