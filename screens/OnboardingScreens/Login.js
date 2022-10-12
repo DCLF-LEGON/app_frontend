@@ -147,9 +147,15 @@ const styles = StyleSheet.create({
     footer: {
         flex: 3,
         backgroundColor: '#fff',
+<<<<<<< HEAD
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
         paddingHorizontal: 20,
+=======
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 10,
+        paddingHorizontal: 10,
+>>>>>>> 4a88e8e005a05e08324d6728e6ad3fe35a0bf3b4
         paddingVertical: 30,
         justifyContent: "center",
 
