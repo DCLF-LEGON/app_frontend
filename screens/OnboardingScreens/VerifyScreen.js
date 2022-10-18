@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import { MaterialCommunityIcons, MaterialIcons, Ionicons, AntDesign, FontAwesome } from "@expo/vector-icons";
+import { MaterialIcons, AntDesign, } from "@expo/vector-icons";
 
 export default function Verify({ navigation }) {
     return (

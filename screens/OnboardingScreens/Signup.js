@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import { MaterialCommunityIcons, MaterialIcons, Ionicons, AntDesign, FontAwesome, Feather  } from "@expo/vector-icons";
+import {  AntDesign,  Feather  } from "@expo/vector-icons";
 
 class SignUp extends React.Component {
               

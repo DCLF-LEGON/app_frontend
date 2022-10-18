@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Link, NavigationContainer } from '@react-navigation/native';
-import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import { MaterialCommunityIcons, MaterialIcons, Ionicons, AntDesign, FontAwesome,  Feather } from "@expo/vector-icons";
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, } from 'react-native';
+import {  AntDesign, Feather } from "@expo/vector-icons";
+import CheckBox from '@react-native-community/checkbox';
 
 class Login extends React.Component {
     constructor (props) {
@@ -87,8 +87,14 @@ class Login extends React.Component {
 
 
                     <View style={styles.remember_forgot} >
-                        <View><Text>Remember me</Text></View>
-                        <TouchableOpacity>
+                        <View>
+                      
+
+                            <Text>Remember me</Text>
+                            </View>
+                        <TouchableOpacity
+                        onPress={() => navigation.navigate('ResetPassword')}
+                        >
                             <Text style={{ color: "#0174DF" }}>Forgot Password?</Text>
                         </TouchableOpacity>
                     </View>

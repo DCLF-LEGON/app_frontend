@@ -8,8 +8,8 @@ export default function Main({ navigation }) {
       <View style={styles.container}>
 
          <View style={styles.imageContainer}>
-            <Image source={require('../../assets/dlcf.jpeg')} style={{ height: 73, width: 73, }} resizeMode="center" />
-            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 54, }} resizeMode="center" />
+            <Image source={require('../../assets/dlcf.jpeg')} style={{ height: 77, width: 77,marginHorizontal:10 }} resizeMode="center" />
+            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 73, marginHorizontal:20 }} resizeMode="center" />
          </View>
 
          <Text style={styles.heroText}>DLCF-LEGON</Text>
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
    },
    imageContainer: {
       flexDirection: "row",
-      justifyContent: "space-evenly"
+      justifyContent: "space-around"
    },
 
    heroText: {

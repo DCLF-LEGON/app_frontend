@@ -7,6 +7,7 @@ import Verify from '../screens/OnboardingScreens/VerifyScreen';
 import Login from '../screens/OnboardingScreens/Login';
 import VerifyLogin from '../screens/OnboardingScreens/VerifyLogin';
 import Verified from '../screens/OnboardingScreens/VerifiedScreen';
+import ResetPassword from '../screens/OnboardingScreens/ResetPassword';
  
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function Routes() {
                 <Stack.Screen name="Verify" component={Verify} options={{ headerShown: false }} />
                 <Stack.Screen name="VerifyLogin" component={VerifyLogin} options={{ headerShown: false }} />
                 <Stack.Screen name="Verified" component={Verified} options={{ headerShown: false }} />
+                <Stack.Screen name="ResetPassword" component={ResetPassword} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
