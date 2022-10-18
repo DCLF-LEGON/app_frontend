@@ -2,14 +2,16 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
+
 export default function Main({ navigation }) {
    return (
 
       <View style={styles.container}>
 
          <View style={styles.imageContainer}>
-            <Image source={require('../../assets/dlcf.jpeg')} style={{ height: 77, width: 77,marginHorizontal:10 }} resizeMode="center" />
-            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 73, marginHorizontal:20 }} resizeMode="center" />
+            <Image source={require('../../assets/dlcf.jpg')} style={{ height: 73, width: 73,marginHorizontal:10 }} resizeMode="center" />
+            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 54, marginHorizontal:20 }} resizeMode="center" />
+ 
          </View>
 
          <Text style={styles.heroText}>DLCF-LEGON</Text>
@@ -67,7 +69,8 @@ const styles = StyleSheet.create({
    signupText: {
       fontWeight: 'bold',
       color: "#fff",
-      fontSize: 20
+      fontSize: 20,
+   
    },
    loginButton: {
       paddingVertical: 10,
@@ -77,7 +80,8 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       borderWidth: 1,
       borderColor: "#0174DF",
-      top: 20
+      top: 20,
+      
 
    },
    loginText: {
