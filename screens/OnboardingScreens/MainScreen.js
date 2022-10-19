@@ -10,7 +10,7 @@ export default function Main({ navigation }) {
 
          <View style={styles.imageContainer}>
             <Image source={require('../../assets/dlcf.jpg')} style={{ height: 73, width: 73,marginHorizontal:10 }} resizeMode="center" />
-            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 54, marginHorizontal:20 }} resizeMode="center" />
+            <Image source={require('../../assets/legon.jpg')} style={{ height: 73, width: 54, marginHorizontal:10 }} resizeMode="center" />
  
          </View>
 

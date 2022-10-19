@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import {  AntDesign, Feather } from "@expo/vector-icons";
+import { AntDesign, Feather } from "@expo/vector-icons";
 
 class ResetPassword extends React.Component {
     constructor(props) {
@@ -51,7 +51,7 @@ class ResetPassword extends React.Component {
                         <Text style={styles.text_footer}>Type your Password</Text>
                         <View style={styles.action}>
                             <TextInput
-                                placeholder="Password"
+                                placeholder="Type new password"
                                 placeholderTextColor="#666666"
                                 style={styles.textInput}
                                 autoCapitalize="none"
@@ -79,7 +79,7 @@ class ResetPassword extends React.Component {
                         <Text style={styles.text_footer}>Retype your password</Text>
                         <View style={styles.action}>
                             <TextInput
-                                placeholder="Password"
+                                placeholder="Retype password"
                                 placeholderTextColor="#666666"
                                 style={styles.textInput}
                                 autoCapitalize="none"
@@ -108,7 +108,7 @@ class ResetPassword extends React.Component {
 
 
                         <TouchableOpacity style={styles.updateButton}
-
+                            onPress={() => navigation.navigate('Updatedpassword')}
                         >
                             <Text style={styles.updateText}>UPDATE</Text>
                         </TouchableOpacity>

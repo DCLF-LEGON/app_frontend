@@ -33,10 +33,14 @@ class SignUp extends React.Component {
     render(){
         let {navigation} = this.props 
     return (
+        <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
+      >
 
 
         <View style={styles.container}>
-            <KeyboardAvoidingView></KeyboardAvoidingView>
+           
             <View style={styles.header}>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Main')}
@@ -137,6 +141,7 @@ class SignUp extends React.Component {
 
 
         </View>
+        </KeyboardAvoidingView>
 
     );
 }

@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Link, NavigationContainer } from '@react-navigation/native';
-import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import {MaterialCommunityIcons,MaterialIcons, Ionicons, AntDesign, FontAwesome} from "@expo/vector-icons";
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, } from 'react-native';
+import { MaterialIcons,  } from "@expo/vector-icons";
 
-export default function Verified({navigation}) {
+export default function UpdatedPassword({navigation}) {
     return (
        
         
@@ -11,14 +10,16 @@ export default function Verified({navigation}) {
 
                 <View style={styles.header}>
                    
-                    <Text style={styles.text_header}>VERIFIED</Text>
+                    <Text style={styles.text_header}>RESET PASSWORD</Text>
                 </View>
                  <View style={styles.footer}>
                  <MaterialIcons style={styles.footer_icon} name="verified" size={80} color="#0174DF" />
-                 <Text style={{fontSize:20,alignSelf:"center", marginTop:40}}>Your account is succesfully <Text style={{fontWeight:"bold"}}>verified!</Text></Text>
+                 <Text style={{fontSize:20,alignSelf:"center", marginTop:40}}>Password succesfully  <Text style={{fontWeight:"bold"}}> Updated!</Text></Text>
 
-                 <TouchableOpacity style={styles.continueButton}>
-                        <Text style={styles.continueText}>CONTINUE</Text>
+                 <TouchableOpacity style={styles.loginButton}
+                 onPress={() => navigation.navigate('Login')}
+                 >
+                        <Text style={styles.loginText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -39,18 +40,19 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBottom: 50,
         backgroundColor: '#0174DF',
-         justifyContent:"center",
-         alignItems:'center'
+        
     },
 
     text_header: {
         color: '#fff',
         fontSize: 40,
-        marginTop: 80,
+        marginTop: 40,
         fontFamily: 'Avenir-Medium',
         alignSelf: "center",
         fontWeight:"700",
         fontStyle:"normal",
+        textAlign:"center",
+        top: 50
          
     },
     header_icon:{
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
         marginTop:100
 
     },
-    continueButton: {
+    loginButton: {
         paddingVertical: 10,
         backgroundColor: "#0174DF",
         alignItems: "center",
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
         marginTop:80
 
     },
-    continueText: {
+    loginText: {
         fontWeight: 'bold',
         color: "#fff",
         fontSize: 20

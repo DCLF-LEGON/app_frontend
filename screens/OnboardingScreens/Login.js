@@ -1,127 +1,132 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, } from 'react-native';
-import {  AntDesign, Feather } from "@expo/vector-icons";
-import CheckBox from '@react-native-community/checkbox';
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity,KeyboardAvoidingView } from 'react-native';
+import { AntDesign, Feather } from "@expo/vector-icons";
+ 
 
 class Login extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props)
-        this.state ={  
-          secureTextEntry: true,
-          confirm_secureTextEntry: true,
-          isValidUser: true,
-          isValidPassword: true,
-     
+        this.state = {
+            secureTextEntry: true,
+            confirm_secureTextEntry: true,
+            isValidUser: true,
+            isValidPassword: true,
+
         }
-     }
-    
-    
-     updateSecureTextEntry = () => {
+    }
+
+
+    updateSecureTextEntry = () => {
         this.setState({
-          secureTextEntry: !this.state.secureTextEntry
-      });
-        
-      }
-      
-       updateConfirmSecureTextEntry = () => {
+            secureTextEntry: !this.state.secureTextEntry
+        });
+
+    }
+
+    updateConfirmSecureTextEntry = () => {
         this.setState({
-          confirm_secureTextEntry: !this.state.confirm_secureTextEntry
-      });
-      }
-    
-    render(){
-        let {navigation} = this.props 
-    
-    return (
+            confirm_secureTextEntry: !this.state.confirm_secureTextEntry
+        });
+    }
 
+    render() {
+        let { navigation } = this.props
 
-        <View style={styles.container}>
+        return (
 
-            <View style={styles.header}>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Main')}
-                >
-                    <AntDesign style={styles.header_icon} name="left" size={20} color="#fff" />
-                </TouchableOpacity>
+            <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={styles.container}
+          >
 
-                <Text style={styles.text_header}>LOGIN</Text>
-            </View>
-            <View style={styles.footer}>
-                <ScrollView>
-                    <Text style={styles.text_footer}>Email Address</Text>
-                    <TextInput
-                        placeholder="Type your e-mail"
-                        placeholderTextColor="#666666"
-                        style={styles.textInput}
-                        autoCapitalize="none"
-                        multiline={false}
+            <View style={styles.container}>
 
-                    />
+                <View style={styles.header}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Main')}
+                    >
+                        <AntDesign style={styles.header_icon} name="left" size={20} color="#fff" />
+                    </TouchableOpacity>
 
-                    <Text style={styles.text_footer}>Enter your Password</Text>
-                    <View style={styles.action}>
+                    <Text style={styles.text_header}>LOGIN</Text>
+                </View>
+                <View style={styles.footer}>
+                    <ScrollView>
+                        <Text style={styles.text_footer}>Email Address</Text>
                         <TextInput
-                            placeholder="Password"
+                            placeholder="Type your e-mail"
                             placeholderTextColor="#666666"
                             style={styles.textInput}
                             autoCapitalize="none"
                             multiline={false}
 
                         />
-                        <TouchableOpacity
-                            onPress={this.updateSecureTextEntry}
-                            style={styles.eye}
-                        >
-                            {this.state.secureTextEntry ?
-                                <Feather name="eye-off" size={20} color="#B1B1B1" />
-                                :
-                                <Feather
-                                    name="eye"
-                                    color="grey"
-                                    size={20}
-                                />
-                            }
-                        </TouchableOpacity>
 
-                    </View>
+                        <Text style={styles.text_footer}>Enter your Password</Text>
+                        <View style={styles.action}>
+                            <TextInput
+                                placeholder="Password"
+                                placeholderTextColor="#666666"
+                                style={styles.textInput}
+                                autoCapitalize="none"
+                                multiline={false}
+
+                            />
+                            <TouchableOpacity
+                                onPress={this.updateSecureTextEntry}
+                                style={styles.eye}
+                            >
+                                {this.state.secureTextEntry ?
+                                    <Feather name="eye-off" size={20} color="#B1B1B1" />
+                                    :
+                                    <Feather
+                                        name="eye"
+                                        color="grey"
+                                        size={20}
+                                    />
+                                }
+                            </TouchableOpacity>
+
+                        </View>
 
 
-                    <View style={styles.remember_forgot} >
-                        <View>
-                      
+                        <View style={styles.remember_forgot} >
+                            <View>
+                            
 
-                            <Text>Remember me</Text>
+                                <Text>Remember me</Text>
                             </View>
-                        <TouchableOpacity
-                        onPress={() => navigation.navigate('ResetPassword')}
+                            <TouchableOpacity
+                                onPress={() => navigation.navigate('ResetPassword')}
+                            >
+                                <Text style={{ color: "#0174DF" }}>Forgot Password?</Text>
+                            </TouchableOpacity>
+                        </View>
+
+
+
+                        <TouchableOpacity style={styles.submitButton}
+
                         >
-                            <Text style={{ color: "#0174DF" }}>Forgot Password?</Text>
+                            <Text style={styles.submitText}>LOGIN</Text>
                         </TouchableOpacity>
-                    </View>
 
-
-
-                    <TouchableOpacity style={styles.submitButton}
-
-                    >
-                        <Text style={styles.submitText}>LOGIN</Text>
-                    </TouchableOpacity>
-
-                    <View><Text style={{ alignSelf: "center" }}>Dont have an account?<Text onPress={() => navigation.navigate('Signup')} style={{ fontWeight: "bold", color: "#0174DF" }}>
-                        Click here</Text></Text></View>
+                        <View><Text style={{ alignSelf: "center" }}>Dont have an account?<Text onPress={() => navigation.navigate('Signup')} style={{ fontWeight: "bold", color: "#0174DF" }}>
+                            Click here</Text></Text></View>
 
 
 
 
-                </ScrollView>
+                    </ScrollView>
+                </View>
+
+
+
             </View>
+            </KeyboardAvoidingView>
 
-
-
-        </View>
-
-    );
-};
+        );
+    };
 };
 
 const styles = StyleSheet.create({
@@ -153,7 +158,7 @@ const styles = StyleSheet.create({
     footer: {
         flex: 3,
         backgroundColor: '#fff',
-  
+
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
         paddingHorizontal: 20,
@@ -176,11 +181,11 @@ const styles = StyleSheet.create({
         marginBottom: 20,
 
     },
-    eye :{
-        position:"absolute",
-        left:290,
-        top:12
-        
+    eye: {
+        position: "absolute",
+        left: 290,
+        top: 12
+
     },
     remember_forgot: {
         flexDirection: "row",
