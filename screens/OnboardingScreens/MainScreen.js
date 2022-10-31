@@ -26,7 +26,9 @@ export default function Main({ navigation }) {
             <Text style={styles.loginText}>LOG IN</Text>
          </TouchableOpacity>
 
-         <TouchableOpacity>
+         <TouchableOpacity
+          onPress={() => navigation.navigate('Sermons')}
+         >
             <Text style={styles.skip}>Skip for now</Text>
          </TouchableOpacity>
 

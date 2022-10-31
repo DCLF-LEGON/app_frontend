@@ -22,6 +22,12 @@ export default function Verify({ navigation }) {
                     <Text style={styles.footerText}>To confirm your account, enter the 4-digit code sent to
                         <Text style={{ fontWeight: "bold" }}>name@email.com</Text>
                     </Text>
+                    {/* <View style={styles.loadContainer}>
+                        <View style={styles.load}></View>
+                        <View style={styles.load}></View>
+                        <View style={styles.load}></View>
+                        <View style={styles.load}></View>
+                    </View> */}
 
 
                     <TouchableOpacity style={styles.verifyButton}>
@@ -86,6 +92,18 @@ const styles = StyleSheet.create({
         marginTop: 25,
         marginHorizontal: 20
     },
+
+    load:{
+        height:10,
+        width:10,
+        backgroundColor:"red"
+    },
+
+
+
+
+
+
 
     verifyButton: {
         paddingVertical: 10,

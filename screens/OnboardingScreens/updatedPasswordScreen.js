@@ -14,7 +14,7 @@ export default function UpdatedPassword({navigation}) {
                 </View>
                  <View style={styles.footer}>
                  <MaterialIcons style={styles.footer_icon} name="verified" size={80} color="#0174DF" />
-                 <Text style={{fontSize:20,alignSelf:"center", marginTop:40}}>Password succesfully  <Text style={{fontWeight:"bold"}}> Updated!</Text></Text>
+                 <Text style={{fontSize:20,alignSelf:"center", marginTop:40, }}>Password succesfully<Text style={{fontWeight:"700"}}> Updated!</Text></Text>
 
                  <TouchableOpacity style={styles.loginButton}
                  onPress={() => navigation.navigate('Login')}

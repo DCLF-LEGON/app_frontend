@@ -133,8 +133,6 @@ class SignUp extends React.Component {
                     </TouchableOpacity>
 
 
-
-
                 </ScrollView>
             </View>
 

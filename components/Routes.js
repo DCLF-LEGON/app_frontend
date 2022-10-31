@@ -9,6 +9,19 @@ import VerifyLogin from '../screens/OnboardingScreens/VerifyLogin';
 import Verified from '../screens/OnboardingScreens/VerifiedScreen';
 import ResetPassword from '../screens/OnboardingScreens/ResetPassword';
 import UpdatedPassword from '../screens/OnboardingScreens/updatedPasswordScreen';
+
+
+// HomeSecreens
+import TopTabScreen from './Tabroutes';
+import Details from '../screens/HomeScreens/DetailsScreen';
+import BottomStackScreen from './Tabroutes';
+
+ 
+
+ 
+
+ 
+
  
 const Stack = createStackNavigator();
 
@@ -24,6 +37,14 @@ export default function Routes() {
                 <Stack.Screen name="Verified" component={Verified} options={{ headerShown: false }} />
                 <Stack.Screen name="ResetPassword" component={ResetPassword} options={{ headerShown: false }} />
                 <Stack.Screen name="Updatedpassword" component={UpdatedPassword} options={{ headerShown: false }} />
+                  
+                {/* HomeScreens */}
+                <Stack.Screen name="Sermons" component={TopTabScreen}    options={{ headerShown: false }}/>
+                <Stack.Screen name="Details" component={Details}    />
+               
+              
+                 
+
             </Stack.Navigator>
         </NavigationContainer>
     );
