@@ -8,7 +8,9 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
 export default function Sermons({ navigation }) {
-  const barner =require('../../assets/images/3.png')
+ 
+  const barner =require[('../../assets/images/barner.jpg')]
+ 
   return (
    <ScrollView  style={styles.container} >
      <Searchbar
@@ -20,9 +22,10 @@ export default function Sermons({ navigation }) {
     />
 
    
-    <Text style={{fontSize:18, marginVertical:25}}> Welcome to the <Text style={{color:"#0174DF", fontWeight:"700"}}> DLCF-LEGON APP</Text></Text>
+ 
+    <Text style={{fontSize:15, marginVertical:25, lineHeight: 18, fontWeight:"400"}}> Welcome to the <Text style={{color:"#0174DF", fontWeight:"700",lineHeight: 18,}}> DLCF-LEGON APP</Text></Text>
    
-    <View >
+ 
   <TouchableWithoutFeedback
     
     onPress={() =>{
@@ -30,41 +33,50 @@ export default function Sermons({ navigation }) {
           otherParam:{barner},
           title: "THE CONFORT OF CHRIST",
           pastorName: "the name of the pastor",
-          message:"the message goes here jjgjnsjk nkjnbkjgnkjg fnbkjgfnbgfnbk jgfnbkjnfgkbngkj ngndjndj",
+ 
+          message:
+          "The God we serve is faithful, truthful and cannot turn His back on us if we abide by His word. He is the God who cannot fail nbrv,bjbjghbsgjsbbfjhbjbfhbvhbvbbbfjvbhjh hrgbjghjbhtj htjghtighl hguthgtuh tuhguth ghtruhithg ghiuhiuhgitrlgiuthlh tghtughtru thtughtthgh utghghtigh uhhtithiut bdzhjfdhjhdf dhgjhdghfbhhjhsjhjvhdfjhflhjh fbghbbhjdfbvhfbhjdfsbvhjsdf hghhfklsjhliuhskbsdggfhdgsh fgvsfhgghgfsdgfusdgfuygf fgsurkfyguygfuygsuygfsruy fhgfugskhsghghgd gksuyguyghfgrshbfjhsgruysrehjrgr hghjgsjhgdfhghgfhdfhhjvbjdhb fhbhjgfbjhbjhbfjhbsdfjhbvhfd dfbjbhjhbvjhbdfjdhb.",
+ 
       
       });
     }}
   >
     <ImageBackground source={barner} resizeMode="cover" style={styles.image}>
-      <Text style={styles.text}>MONDAY BIBLE STUDY</Text>
+ 
+      <Text style={styles.text} >MONDAY</Text>
+      <Text style={styles.text2} >BIBLE STUDY</Text>
+      
     </ImageBackground>
     </TouchableWithoutFeedback>
       
-    </View >
+   
+ 
 
     <Text  style={styles.header}>RECENTLY WATCHED SERMONS</Text>
 
     <ScrollView  horizontal={true}  style={styles.mainImageContainer}>
       <View style={styles.imagecontainer}> 
-         <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 100, width: 99,  }}   />    
+ 
+         <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 99.01, width: 93,borderRadius: 5  }}   />    
       </View>
       <View style={styles.imagecontainer}>  
-      <Image source={require('../../assets/images/recently2.jpg')} style={{ height: 100, width: 99,  }}   />    
+      <Image source={require('../../assets/images/recently2.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5 }}   />    
       </View>
       <View style={styles.imagecontainer}>  
-      <Image source={require('../../assets/images/recently4.jpg')} style={{ height: 100, width: 99,  }}   />    
+      <Image source={require('../../assets/images/recently4.jpg')} style={{ height: 99.01, width: 93,borderRadius: 5  }}   />    
       </View>
       <View style={styles.imagecontainer}>  
-      <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+      <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
       </View>
       <View style={styles.imagecontainer}>  
-      <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+      <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
       </View>
       <View style={styles.imagecontainer}>  
-      <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+      <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
       </View>
       <View style={styles.imagecontainer}>  
-      <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+      <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
+ 
       </View>
       
     </ScrollView>
@@ -76,25 +88,27 @@ export default function Sermons({ navigation }) {
 
 <ScrollView  horizontal={true}  style={styles.mainImageContainer}>
   <View style={styles.imagecontainer}> 
-     <Image source={require('../../assets/images/popular1.jpg')} style={{ height: 100, width: 99,  }}   />    
+ 
+     <Image source={require('../../assets/images/popular1.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
   </View>
   <View style={styles.imagecontainer}>  
-  <Image source={require('../../assets/images/popular2.jpg')} style={{ height: 100, width: 99,  }}   />    
+  <Image source={require('../../assets/images/popular2.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
   </View>
   <View style={styles.imagecontainer}>  
-  <Image source={require('../../assets/images/populer3.jpg')} style={{ height: 100, width: 99,  }}   />    
+  <Image source={require('../../assets/images/populer3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
   </View>
   <View style={styles.imagecontainer}>  
-  <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+  <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 99.01, width: 93,borderRadius: 5 }}   />    
   </View>
   <View style={styles.imagecontainer}>  
-  <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+  <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5 }}   />    
   </View>
   <View style={styles.imagecontainer}>  
-  <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+  <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
   </View>
   <View style={styles.imagecontainer}>  
-  <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 99,  }}   />    
+  <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
+ 
   </View>
   
 </ScrollView>
@@ -112,7 +126,10 @@ const styles = StyleSheet.create({
    
   },
   searBox:{
-      height:45,
+ 
+      height:30,
+      width:"100%",
+ 
        borderWidth:1,
       borderColor:"#0174DF",
       marginTop:20,
@@ -121,6 +138,41 @@ const styles = StyleSheet.create({
       
   },
 
+ 
+  
+  image: {
+    width:"100%",
+    height:188,
+    borderRadius:5,
+
+  },
+
+  text: {
+    color: "#FF6B00",
+    top: 50,
+    fontSize: 24,
+    lineHeight: 29,
+    fontWeight: "700",     
+  },
+  text2: {
+    color: "white",
+    top: 30,
+    fontSize: 24,
+    lineHeight: 29,
+    fontWeight: "700",
+     marginTop:1
+
+        
+  },
+  header:{
+    fontStyle:"normal",
+    fontSize:15,
+    fontWeight:"400",
+    lineHeight:18,
+    marginTop:20,
+    color:"#000000"
+    
+  },
   MainBarner:{
     flex: 1,
     textAlign:"center",
@@ -143,20 +195,14 @@ const styles = StyleSheet.create({
      marginTop:40
         
   },
-  header:{
-    fontSize:17,
-    fontWeight:"450",
-    lineHeight:18.29,
-    marginTop:20
-  },
+  
   mainImageContainer:{
     flexDirection:"row",
   },
   imagecontainer:{
-    height:100,
-    width:99,
     borderRadius:5,
-    backgroundColor:"blue",
+    backgroundColor:"#fff",
+ 
     marginHorizontal:5,
     marginVertical:10,
     padding:0

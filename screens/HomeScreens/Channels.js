@@ -9,38 +9,54 @@ export default function Channels() {
 
       <View style={styles.mainImageContainer}>
         <View style={styles.imagecontainer}>
-          <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 100, width: 110, }} />
+
+          <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+
+         
+ 
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>BIBLE STUDY</Text>
           </View>
 
         </View>
         <View style={styles.imagecontainer}>
-          <Image source={require('../../assets/images/recently2.jpg')} style={{ height: 100, width: 110, }} />
+ 
+          <Image source={require('../../assets/images/recently2.jpg')} style={{ height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5}} />
+ 
+      
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>CAMPUS SERVICE</Text>
           </View>
         </View>
         <View style={styles.imagecontainer}>
-          <Image source={require('../../assets/images/recently4.jpg')} style={{ height: 100, width: 110, }} />
+ 
+          <Image source={require('../../assets/images/recently4.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>KOINONIA</Text>
           </View>
         </View>
         <View style={styles.imagecontainer}>
-          <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 110, }} />
+ 
+          <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
+      
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>CHOIR</Text>
           </View>
         </View>
         <View style={styles.imagecontainer}>
-          <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 110, }} />
+
+          <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>FIRE HOUR</Text>
           </View>
         </View>
         <View style={styles.imagecontainer}>
-          <Image source={require('../../assets/images/recently3.jpg')} style={{ height: 100, width: 110, }} />
+ 
+          <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>CAMPUS CONGRESS</Text>
           </View>
@@ -57,20 +73,27 @@ export default function Channels() {
 
 <View style={styles.mainImageContainer}>
   <View style={styles.imagecontainer}>
-    <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 100, width: 110, }} />
+ 
+    <Image source={require('../../assets/images/recently1.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
     <View style={styles.badgeContainer}>
       <Text style={styles.badgeText}>BIBLE STUDY</Text>
     </View>
 
   </View>
   <View style={styles.imagecontainer}>
-    <Image source={require('../../assets/images/recently2.jpg')} style={{ height: 100, width: 110, }} />
+ 
+    <Image source={require('../../assets/images/recently2.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
+   
     <View style={styles.badgeContainer}>
       <Text style={styles.badgeText}>CAMPUS SERVICE</Text>
     </View>
   </View>
   <View style={styles.imagecontainer}>
-    <Image source={require('../../assets/images/recently4.jpg')} style={{ height: 100, width: 110, }} />
+ 
+    <Image source={require('../../assets/images/recently4.jpg')} style={{  height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
     <View style={styles.badgeContainer}>
       <Text style={styles.badgeText}>KOINONIA</Text>
     </View>
@@ -87,20 +110,27 @@ export default function Channels() {
 
 <View style={styles.mainImageContainer}>
   <View style={styles.imagecontainer}>
-    <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 100, width: 110, }} />
+ 
+    <Image source={require('../../assets/images/recently1.jpg')} style={{   height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
+    
     <View style={styles.gsbadgeContainer}>
       <Text style={styles.badgeText}>BIBLE STUDY</Text>
     </View>
 
   </View>
   <View style={styles.imagecontainer}>
-    <Image source={require('../../assets/images/recently2.jpg')} style={{ height: 100, width: 110, }} />
+ 
+    <Image source={require('../../assets/images/recently2.jpg')} style={{   height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
     <View style={styles.gsbadgeContainer}>
       <Text style={styles.badgeText}>CAMPUS SERVICE</Text>
     </View>
   </View>
   <View style={styles.imagecontainer}>
-    <Image source={require('../../assets/images/recently4.jpg')} style={{ height: 100, width: 110, }} />
+ 
+    <Image source={require('../../assets/images/recently4.jpg')} style={{   height: 109, width: 100, borderTopLeftRadius:5, borderTopRightRadius:5 }} />
+ 
     <View style={styles.gsbadgeContainer}>
       <Text style={styles.badgeText}>KOINONIA</Text>
     </View>
@@ -116,44 +146,45 @@ export default function Channels() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor:"#fff",
+    paddingHorizontal:15
 
   },
   header: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: "400",
-    lineHeight: 18.29,
-    marginTop: 20
+    lineHeight: 18,
+    backgroundColor: '#fff',
   },
 
   mainImageContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-between",
-    marginBottom:35
-
-
+ 
   },
   imagecontainer: {
-    height: 100,
-    width: 110,
-    borderRadius: 5,
-    backgroundColor: "blue",
+    backgroundColor: "#fff",
     marginHorizontal: 5,
     marginVertical: 20,
     padding: 0
 
   },
   badgeContainer: {
+    width: 100,
+    height:24,
+    left:0,
     backgroundColor: "#0174DF",
-    paddingVertical: 5,
+ 
     justifyContent: "center",
     alignItems: "center",
 
   },
 
   badgeText: {
-    fontSize: 14,
+    fontSize: 10,
+    lineHeight:12,
+ 
     color: "#fff",
     fontWeight: "700"
 

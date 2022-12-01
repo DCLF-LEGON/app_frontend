@@ -1,3 +1,4 @@
+ 
 import * as React from 'react';
 import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import {  AntDesign,  Feather  } from "@expo/vector-icons";
@@ -223,3 +224,4 @@ const styles = StyleSheet.create({
 });
 
 export default SignUp
+ 
