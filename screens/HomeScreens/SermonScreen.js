@@ -8,7 +8,9 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
 export default function Sermons({ navigation }) {
+ 
   const barner =require[('../../assets/images/barner.jpg')]
+ 
   return (
    <ScrollView  style={styles.container} >
      <Searchbar
@@ -20,8 +22,10 @@ export default function Sermons({ navigation }) {
     />
 
    
+ 
     <Text style={{fontSize:15, marginVertical:25, lineHeight: 18, fontWeight:"400"}}> Welcome to the <Text style={{color:"#0174DF", fontWeight:"700",lineHeight: 18,}}> DLCF-LEGON APP</Text></Text>
    
+ 
   <TouchableWithoutFeedback
     
     onPress={() =>{
@@ -29,13 +33,16 @@ export default function Sermons({ navigation }) {
           otherParam:{barner},
           title: "THE CONFORT OF CHRIST",
           pastorName: "the name of the pastor",
+ 
           message:
           "The God we serve is faithful, truthful and cannot turn His back on us if we abide by His word. He is the God who cannot fail nbrv,bjbjghbsgjsbbfjhbjbfhbvhbvbbbfjvbhjh hrgbjghjbhtj htjghtighl hguthgtuh tuhguth ghtruhithg ghiuhiuhgitrlgiuthlh tghtughtru thtughtthgh utghghtigh uhhtithiut bdzhjfdhjhdf dhgjhdghfbhhjhsjhjvhdfjhflhjh fbghbbhjdfbvhfbhjdfsbvhjsdf hghhfklsjhliuhskbsdggfhdgsh fgvsfhgghgfsdgfusdgfuygf fgsurkfyguygfuygsuygfsruy fhgfugskhsghghgd gksuyguyghfgrshbfjhsgruysrehjrgr hghjgsjhgdfhghgfhdfhhjvbjdhb fhbhjgfbjhbjhbfjhbsdfjhbvhfd dfbjbhjhbvjhbdfjdhb.",
+ 
       
       });
     }}
   >
     <ImageBackground source={barner} resizeMode="cover" style={styles.image}>
+ 
       <Text style={styles.text} >MONDAY</Text>
       <Text style={styles.text2} >BIBLE STUDY</Text>
       
@@ -43,11 +50,13 @@ export default function Sermons({ navigation }) {
     </TouchableWithoutFeedback>
       
    
+ 
 
     <Text  style={styles.header}>RECENTLY WATCHED SERMONS</Text>
 
     <ScrollView  horizontal={true}  style={styles.mainImageContainer}>
       <View style={styles.imagecontainer}> 
+ 
          <Image source={require('../../assets/images/recently1.jpg')} style={{ height: 99.01, width: 93,borderRadius: 5  }}   />    
       </View>
       <View style={styles.imagecontainer}>  
@@ -67,6 +76,7 @@ export default function Sermons({ navigation }) {
       </View>
       <View style={styles.imagecontainer}>  
       <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
+ 
       </View>
       
     </ScrollView>
@@ -78,6 +88,7 @@ export default function Sermons({ navigation }) {
 
 <ScrollView  horizontal={true}  style={styles.mainImageContainer}>
   <View style={styles.imagecontainer}> 
+ 
      <Image source={require('../../assets/images/popular1.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
   </View>
   <View style={styles.imagecontainer}>  
@@ -97,6 +108,7 @@ export default function Sermons({ navigation }) {
   </View>
   <View style={styles.imagecontainer}>  
   <Image source={require('../../assets/images/recently3.jpg')} style={{  height: 99.01, width: 93,borderRadius: 5  }}   />    
+ 
   </View>
   
 </ScrollView>
@@ -114,8 +126,10 @@ const styles = StyleSheet.create({
    
   },
   searBox:{
+ 
       height:30,
       width:"100%",
+ 
        borderWidth:1,
       borderColor:"#0174DF",
       marginTop:20,
@@ -124,6 +138,7 @@ const styles = StyleSheet.create({
       
   },
 
+ 
   
   image: {
     width:"100%",
@@ -158,12 +173,36 @@ const styles = StyleSheet.create({
     color:"#000000"
     
   },
+  MainBarner:{
+    flex: 1,
+    textAlign:"center",
+    backgroundColor:"red"
+    
+    
+  },
+  image: {
+   borderRadius:5,
+   height:200
+  },
+
+  text: {
+    color: "white",
+    fontSize: 24,
+    lineHeight: 50,
+    fontWeight: "700",
+     height:200,
+     justifyContent:"center",
+     marginTop:40
+        
+  },
+  
   mainImageContainer:{
     flexDirection:"row",
   },
   imagecontainer:{
     borderRadius:5,
     backgroundColor:"#fff",
+ 
     marginHorizontal:5,
     marginVertical:10,
     padding:0
